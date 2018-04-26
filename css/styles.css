@@ -1,0 +1,116 @@
+/*-----universal-----*/
+
+* {
+	font-family: 'Quantico', sans-serif;
+}
+
+/*-----header-----*/
+
+header {
+	height: 70px;
+	background-color: #1E1E24;
+	color: #FFFFFF;
+	box-shadow: 0px 2px 8px 0px rgba(0,0,0,0.35);
+	position: fixed;
+	width: 100%;
+	z-index: 100;
+	top: 0px;
+	left: 0px;
+}
+
+.bungee {
+	font-family: 'Bungee Shade', cursive;
+}
+
+ul {
+	list-style-type: none;
+}
+
+li a { 
+	display: inline;
+	text-decoration: none;
+	color: #FFFFFF;
+ }
+
+ /*------Body------*/
+.main-wrapper {
+	background-color: #14080E;
+ }
+
+ .map {
+ 	height: 95%;
+ 	display: none;
+ }
+
+ .h-30rem {
+ 	height: 30rem;
+ }
+
+ /* Icons */
+ .themeColor {
+ 	color: #4B44CF;
+ 	font-size: 1.5rem;
+ }
+
+ .marker {
+ 	background-image: url('../race-finish.png');
+ 	background-size: cover;
+ 	height: 50px;
+ 	width: 50px;
+ }
+
+.supa-lineheight {
+	line-height: 2;
+}
+
+ .main-overlay {
+ 	position: fixed;
+ 	top: 0;
+ 	left: 0;
+ 	z-index: 2;
+ 	height: 100%;
+ 	width: 100%;
+ }
+
+ .main-section {
+ 	position: fixed;
+ 	margin-top: 70px;
+ 	right: 8%;
+ 	border-left: 2px solid rgba(5, 74, 145, .5);
+ 	box-shadow: 0px 10px 15px rgba(5, 74, 145, .9);
+ }
+
+ /*----Footer-----*/
+ .footer {
+ 	background-color: #1E1E24;
+ 	box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.35);
+ 	height: 40px;
+ 	position: fixed;
+ 	bottom: 0px;
+ 	z-index: 3;
+ }
+
+
+ /*----- Scrollbar------*/
+/*width*/
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/*Background*/
+::-webkit-scrollbar-track {
+    background: #fff; 
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: rgba(5, 74, 145, .55); 
+    border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(75, 68, 207); 
+}
+
+
