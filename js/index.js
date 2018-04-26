@@ -3,10 +3,10 @@ $(function (){
 // VARIABLES & DATA
 	var raceLocations = {
 		cities: ["MANHATTAN, NY", "BRONX, NY", "NEW BRUNSWICK, NJ", "STATEN ISLAND, NY"],
-		longitude: [-73.945, -73.917999, -74.447673, -74.081702],
-		latitude: [40.784, 40.8300, 40.506939, 40.650426],
-		zoom: [13.57, 15.64, 15.26, 13.97],
-		bearing: [-7.00, -8.66, -69, -108.00]
+		longitude: [-73.972867, -73.922700, -74.454239, -74.081899],
+		latitude: [40.793973, 40.83111, 40.501516, 40.644335],
+		zoom: [13.45, 15.90, 15.52, 14.5],
+		bearing: [65.00, 65, 0, 25.00]
 	};
 	
 	var data = [
@@ -81,7 +81,8 @@ $(function (){
 		 		],
 		 	zoom: zVal,
 		 	bearing: bVal,
-		 	pitch: 24
+		 	pitch: 24,
+		 	curve: 1
 		 });
 	};
 
@@ -140,9 +141,9 @@ $(function (){
 	var map = new mapboxgl.Map({
 	    container: 'map', // container id
 	    style: 'mapbox://styles/pmaulion/cjg89piec0er12snkswpvaw49', // stylesheet location
-	    center: [-73.945, 40.784], // starting position [lng, lat]
-	    zoom: 13.57, // starting zoom
-	    bearing: -7.00,
+	    center: [-73.972867, 40.793973], // starting position [lng, lat]
+	    zoom: 13.45, // starting zoom
+	    bearing: 65.00,
 	    pitch: 24.00,
 	    
 	});
