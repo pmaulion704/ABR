@@ -12,8 +12,8 @@ $(function (){
 		},
 		{
 			"city" 		: "BRONX, NY",
-			"longitude" : -73.922700,
-			"latitude"  : 40.83111,
+			"longitude" : -73.922746,
+			"latitude"  : 40.832118,
 			"zoom"		: 15.90,
 			"bearing"	: 65.00
 		},
@@ -32,135 +32,179 @@ $(function (){
 			"bearing"	: 25.00
 		}
 	]
-		// cities: ["MANHATTAN, NY", "BRONX, NY", "NEW BRUNSWICK, NJ", "STATEN ISLAND, NY"],
-		// longitude: [, -73.922700, -74.454239, -74.081899],
-		// latitude: [40.793973, 40.83111, 40.501516, 40.644335],
-		// zoom: [13.45, 15.90, 15.52, 14.5],
-		// bearing: [65.00, 65, 0, 25.00]
 	
 	var data = [
 		// MANHATTAN
-		[
-			{
-			"id"   : "015",
-			"race" : "2017 NYRR Midnight Run",
-			"time" : "0:31:45"
-			},
-			{
-			"id"   : "014",
-			"race" : "TCS New York City Marathon", 
-			"time" : "5:05:23"
-			},
-			{
-			"id"   : "013",
-			"race" : "2017 Poland Spring Kickoff (5M)", 
-			"time" : "0:39:12"
-			},
-			{
-			"id"   : "012",
-			"race" : "2017 Run as One by JP Morgan Chase",
-			"time" : "0:49:31"
-			},
-			{
-			"id"   : "011",
-			"race" : "2017 UAE Healthy Kidney 10K",
-			"time" : "0:50:12"
-			},
-			{
-			"id"   : "010",
-			"race" : "2017 United Airlines NYC Half",
-			"time" : "1:54:02"
-			},
-			{
-			"id"   : "009",
-			"race" : "2017 NYRR Gridiron 4M",
-			"time" : "0:31:53"
-			},
-			{
-			"id"   : "008",
-			"race" : "2017 NYRR Joe Kleinerman 10K",
-			"time" : "0:50:51"
-			},
-			{
-			"id"   : "007",
-			"race" : "2016 Poland Spring Marathon Kickoff (5M)",
-			"time" : "0:40:56"
-			},
-						{
-			"id"   : "006",
-			"race" : "2016 Percy Sutton Harlem 5K Run",
-			"time" : "0:24:26"
-			},
-			{
-			"id"   : "005",
-			"race" : "2016 France Run 8K",
-			"time" : "0:43:47"
-			},
-			{
-			"id"   : "004",
-			"race" : "2016 Boomer's Cystic Fibrosis Run to Breathe",
-			"time" : "0:34:20",
-			},
-						{
-			"id"   : "003",
-			"race" : "2016 Achilles Hope & Possibility (4M)",
-			"time" : "0:33:25",
-			},
-			{
-			"id"   : "002",
-			"race" : "2016 UAE Health Kidney 10K",
-			"time" : "0:55:47",
-			},
-			{
-			"id"   : "001",
-			"race" : "2016 City Parks Foundation Run for the Parks (4M)",
-			"time" : "0:34:16"
-			}	
-		],
-		// BRONX
-		[
-			{
-			"id"   : "002",
-			"race" : "2017 Bronx 10 Mile",
-			"time" : '1:24:06' 
-			},
-			{
-			"id"   : "001",
-			"race" : "2016 Bronx 10 Mile",
-			"time" : '1:24:10'
-			}
-		],
-		// NEW BRUNSWICK
-		[
-			{
-			"id"   : "002",
-			"race" : "2018 Rutgers UNITED Half Marathon",
-			"time" : "1:58:20"
-			},
-			{
-			"id"   : "001",
-			"race" : "2017 Big Chill 5K",
-			"time" : "- -"
-			}
-		],
-		// STATEN ISLAND
-		[
-			{
-			"id"   : "001",
-			"race" : "2017 NYRR Staten Island Half",
-			"time" : "1:53:19"
-			}
-		]
+			[
+				{
+				"id"    : "015",
+				"pace" : "8:55",
+				"overall" : 1,
+				"race" : "2017 NYRR Midnight Run",
+				"time" : "0:31:45"
+				},
+				{
+				"id"    : "014",
+				"pace" : "7:54",
+				"overall" : 12,
+				"race" : "TCS New York City Marathon", 
+				"time" : "5:05:23"
+				},
+				{
+				"id"    : "013",
+				"pace" : "6:53",
+				"overall" : 123,
+				"race" : "2017 Poland Spring Kickoff (5M)", 
+				"time" : "0:39:12"
+				},
+				{
+				"id"    : "012",
+				"pace" : "5:52",
+				"overall" : 1234,
+				"race" : "2017 Run as One by JP Morgan Chase",
+				"time" : "0:49:31"
+				},
+				{
+				"id"    : "011",
+				"pace" : "zzzzzzz",
+				"overall" : "yyyyyyy",
+				"race" : "2017 UAE Healthy Kidney 10K",
+				"time" : "0:50:12"
+				},
+				{
+				"id"    : "010",
+				"pace" : "aaaaaa",
+				"overall" : "bbbbbbbbb",
+				"race" : "2017 United Airlines NYC Half",
+				"time" : "1:54:02"
+				},
+				{
+				"id"    : "009",
+				"pace" : "8:55",
+				"overall" : 123,
+				"race" : "2017 NYRR Gridiron 4M",
+				"time" : "0:31:53"
+				},
+				{
+				"id"    : "008",
+				"pace" : "8:55",
+				"overall" : 123,
+				"race" : "2017 NYRR Joe Kleinerman 10K",
+				"time" : "0:50:51"
+				},
+				{
+				"id"    : "007",
+				"pace" : "8:55",
+				"overall" : 123,
+				"race" : "2016 Poland Spring Marathon Kickoff (5M)",
+				"time" : "0:40:56"
+				},
+				{
+				"id"    : "006",
+				"pace" : "8:55",
+				"overall" : 123, 
+				"race" : "2016 Percy Sutton Harlem 5K Run",
+				"time" : "0:24:26"
+				},
+				{
+				"id"    : "005",
+				"pace" : "8:55",
+				"overall" : 123,	 
+				"race" : "2016 France Run 8K",
+				"time" : "0:43:47"
+				},
+				{
+				"id"   : "004",
+				"pace" : "8:55",
+				"overall" : 123,		 
+				"race" : "2016 Boomer's Cystic Fibrosis Run to Breathe",
+				"time" : "0:34:20",
+				},
+				{
+				"id"    : "003",
+				"pace" : "8:55",
+				"overall" : 123, 
+				"race" : "2016 Achilles Hope & Possibility (4M)",
+				"time" : "0:33:25",
+				},
+				{
+				"id"    : "002",
+				"pace" : "8:55",
+				"overall" : 123,
+				"race" : "2016 UAE Health Kidney 10K",
+				"time" : "0:55:47",
+				},
+				{
+				"id"   : "001",
+				"pace" : "8:55",
+				"overall" : 123,
+				"race" : "2016 City Parks Foundation Run for the Parks (4M)",
+				"time" : "0:34:16"
+				}	
+			],
+			// BRONX
+			[
+				{
+				"id"   : "002",
+				"pace" : "8:55",
+				"overall" : 123,
+				"race" : "2017 Bronx 10 Mile",
+				"time" : '1:24:06' 
+				},
+				{
+				"id"   : "001",
+				"pace" : "8:55",
+				"overall" : 123,		 
+				"race" : "2016 Bronx 10 Mile",
+				"time" : '1:24:10'
+				}
+			],
+			// NEW BRUNSWICK
+			[
+				{
+				"id"   : "002",
+				"pace" : "8:5523232",
+				"overall" : 1231232,
+				"race" : "2018 Rutgers UNITED Half Marathon",
+				"time" : "1:58:20"
+				},
+				{
+				"id"   :  "001",
+				"pace" : "0.00000",
+				"overall" : 987236236,
+				"race" : "2017 Big Chill 5K",
+				"time" : "- -"
+				}
+			],
+			// STATEN ISLAND
+			[
+				{
+				"id"   : "001",
+				"pace" : "8:55",
+				"overall" : 123,
+				"race" : "2017 NYRR Staten Island Half",
+				"time" : "1:53:19"
+				}
+			]
 		// End of INDEX
-	];	
+		];	
 	
+//==============================================================	
+//==============================================================
+//===================== END OF DATA  ===========================
+//==============================================================
+//==============================================================
+
+
 // INITIAL PRINT
 	$("#city").html(locations[0]["city"]);
 
 // INITIAL LOAD DATA
 	function loadData(array, item1, item2, item3) {	
 		for (var i = 0; i < array.length; i++) {
-			$("#data").append('<tr id="' + array[i][item1] + '"><td class="w-70 bb b--black-20 tl supa-lineheight pv4">'+ array[i][item2] + '</td><td class="w-30 bb b--black-20 tr pv4">'+ array[i][item3] +'</td></tr>');
+			$("#data").append(
+				'<tr id="' + array[i][item1] + '" class="pointer"><td class="w-70 bb b--black-20 tl supa-lineheight pv4">' + array[i][item2] + 
+				'</td><td class="w-30 bb b--black-20 tr pv4">' + array[i][item3] + '</td></tr>');
 		};
 	};
 	loadData(data[0], "id", "race", "time");	
@@ -175,6 +219,7 @@ $(function (){
 			flyLocation(locations[myIndex]["longitude"], locations[myIndex]["latitude"], locations[myIndex]["zoom"], locations[myIndex]["bearing"]);
 			$("tr").remove();
 			loadData(data[myIndex], "id", "race", "time");
+
 		} else {
 			myIndex = 0;
 			$("#city").html(locations[0]["city"]);
@@ -201,6 +246,17 @@ $(function (){
 			loadData(data[3], "id", "race", "time");
 		};
 	});	
+
+	// <ID MATCH CLICK>
+	$("tbody").on("click", "tr", function(){
+		for (var i = 0; i < data[myIndex].length; i++) {
+			if (this.id === data[myIndex][i]["id"]) {
+				console.log(data[myIndex][i]["pace"]);
+				console.log(data[myIndex][i]["overall"]);
+			};
+		};
+	});
+
 
 	// KEYBOARD SHORTCUTS
 	$(document).keydown(function(e) {
