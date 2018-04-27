@@ -10,66 +10,131 @@ $(function (){
 	};
 	
 	var data = [
-		manhattan = {
-			race: ["2017 NYRR Midnight Run", 
-				   "TCS New York City Marathon", 
-				   "2017 Poland Spring Kickoff (5M)", 
-				   "2017 Run as One by JP Morgan Chase",
-				   "2017 UAE Healthy Kidney 10K",
-				   "2017 United Airlines NYC Half",
-				   "2017 NYRR Gridiron 4M",
-				   "2017 NYRR Joe Kleinerman 10K",
-				   "2016 Poland Spring Marathon Kickoff (5M)",
-				   "2016 Percy Sutton Harlem 5K Run",
-				   "2016 France Run 8K",
-				   "2016 Boomer's Cystic Fibrosis Run to Breathe",
-				   "2016 Achilles Hope & Possibility (4M)",
-				   "2016 UAE Health Kidney 10K",
-				   "2016 City Parks Foundation Run for the Parks (4M)"
-				],
-			time: ["0:31:45", 
-				   "5:05:23", 
-				   "0:39:12",
-				   "0:49:31",
-				   "0:50:12",
-				   "1:54:02",
-				   "0:31:53",
-				   "0:50:51",
-				   "0:40:56",
-				   "0:24:26",
-				   "0:43:47",
-				   "0:34:20",
-				   "0:33:25",
-				   "0:55:47",
-				   "0:34:16"
-				]
-		},
-		bronx = {
-			race: ["2017 Bronx 10 Mile", "2016 Bronx 10 Mile"],
-			time: ['1:24:06', '1:24:10']
-		},
-		new_brunswick = {
-			race: ["2018 Rutgers UNITED Half Marathon", "2017 Big Chill 5K"],
-			time: ["1:58:20", "- -"]
-		},
-		staten_island = {
-			race: ["2017 NYRR Staten Island Half"],
-			time: ['1:53:19']
-		}
-		
+		// MANHATTAN
+		[
+			{
+			"id"   : "015",
+			"race" : "2017 NYRR Midnight Run",
+			"time" : "0:31:45"
+			},
+			{
+			"id"   : "014",
+			"race" : "TCS New York City Marathon", 
+			"time" : "5:05:23"
+			},
+			{
+			"id"   : "013",
+			"race" : "2017 Poland Spring Kickoff (5M)", 
+			"time" : "0:39:12"
+			},
+			{
+			"id"   : "012",
+			"race" : "2017 Run as One by JP Morgan Chase",
+			"time" : "0:49:31"
+			},
+			{
+			"id"   : "011",
+			"race" : "2017 UAE Healthy Kidney 10K",
+			"time" : "0:50:12"
+			},
+			{
+			"id"   : "010",
+			"race" : "2017 United Airlines NYC Half",
+			"time" : "1:54:02"
+			},
+			{
+			"id"   : "009",
+			"race" : "2017 NYRR Gridiron 4M",
+			"time" : "0:31:53"
+			},
+			{
+			"id"   : "008",
+			"race" : "2017 NYRR Joe Kleinerman 10K",
+			"time" : "0:50:51"
+			},
+			{
+			"id"   : "007",
+			"race" : "2016 Poland Spring Marathon Kickoff (5M)",
+			"time" : "0:40:56"
+			},
+						{
+			"id"   : "006",
+			"race" : "2016 Percy Sutton Harlem 5K Run",
+			"time" : "0:24:26"
+			},
+			{
+			"id"   : "005",
+			"race" : "2016 France Run 8K",
+			"time" : "0:43:47"
+			},
+			{
+			"id"   : "004",
+			"race" : "2016 Boomer's Cystic Fibrosis Run to Breathe",
+			"time" : "0:34:20",
+			},
+						{
+			"id"   : "003",
+			"race" : "2016 Achilles Hope & Possibility (4M)",
+			"time" : "0:33:25",
+			},
+			{
+			"id"   : "002",
+			"race" : "2016 UAE Health Kidney 10K",
+			"time" : "0:55:47",
+			},
+			{
+			"id"   : "001",
+			"race" : "2016 City Parks Foundation Run for the Parks (4M)",
+			"time" : "0:34:16"
+			}	
+		],
+		// BRONX
+		[
+			{
+			"id"   : "002",
+			"race" : "2017 Bronx 10 Mile",
+			"time" : '1:24:06' 
+			},
+			{
+			"id"   : "001",
+			"race" : "2016 Bronx 10 Mile",
+			"time" : '1:24:10'
+			}
+		],
+		// NEW BRUNSWICK
+		[
+			{
+			"id"   : "002",
+			"race" : "2018 Rutgers UNITED Half Marathon",
+			"time" : "1:58:20"
+			},
+			{
+			"id"   : "001",
+			"race" : "2017 Big Chill 5K",
+			"time" : "- -"
+			}
+		],
+		// STATEN ISLAND
+		[
+			{
+			"id"   : "001",
+			"race" : "2017 NYRR Staten Island Half",
+			"time" : "1:53:19"
+			}
+		]
+		// End of INDEX
 	];	
 	
 // INITIAL PRINT
 	$("#city").html(raceLocations.cities[0]);
 
 // INITIAL LOAD DATA
-	function loadData(raceArray, timeArray) {	
-		var i;
-		for (i = 0; i < raceArray.length; i++) {
-			$("#data").append('<tr><td class="w-70 bb b--black-20 tl supa-lineheight pv4">'+ raceArray[i] + '</td><td class="w-30 bb b--black-20 tr pv4">'+ timeArray[i] +'</td></tr>');
+	function loadData(array, item1, item2, item3) {	
+		for (var i = 0; i < array.length; i++) {
+			$("#data").append('<tr id="' + array[i][item1] + '"><td class="w-70 bb b--black-20 tl supa-lineheight pv4">'+ array[i][item2] + '</td><td class="w-30 bb b--black-20 tr pv4">'+ array[i][item3] +'</td></tr>');
 		};
 	};
-	loadData(data[0].race, data[0].time);	
+	loadData(data[0], "id", "race", "time");	
 
 // FUNCTIONS
 	// FLY TO FUNCTION
@@ -95,13 +160,13 @@ $(function (){
 			$("#city").html(raceLocations.cities[myIndex]);
 			flyLocation(raceLocations.longitude[myIndex], raceLocations.latitude[myIndex], raceLocations.zoom[myIndex], raceLocations.bearing[myIndex]);
 			$("tr").remove();
-			loadData(data[myIndex].race, data[myIndex].time);
+			loadData(data[myIndex], "id", "race", "time");
 		} else {
 			myIndex = 0;
 			$("#city").html(raceLocations.cities[0]);
 			flyLocation(raceLocations.longitude[0], raceLocations.latitude[0], raceLocations.zoom[0], raceLocations.bearing[0]);
 			$("tr").remove();
-			loadData(data[0].race, data[0].time);
+			loadData(data[0], "id", "race", "time");
 		};
 	});
 
@@ -112,14 +177,14 @@ $(function (){
 			$("#city").html(raceLocations.cities[myIndex]);
 			flyLocation(raceLocations.longitude[myIndex], raceLocations.latitude[myIndex], raceLocations.zoom[myIndex], raceLocations.bearing[myIndex]);
 			$("tr").remove();
-			loadData(data[myIndex].race, data[myIndex].time);
+			loadData(data[myIndex], "id", "race", "time");
 
 		} else {
 			myIndex = 3;
 			$("#city").html(raceLocations.cities[3]);
 			flyLocation(raceLocations.longitude[3], raceLocations.latitude[3], raceLocations.zoom[3], raceLocations.bearing[3]);
 			$("tr").remove();
-			loadData(data[3].race, data[3].time);
+			loadData(data[3], "id", "race", "time");
 		};
 	});	
 
