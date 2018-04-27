@@ -1,13 +1,42 @@
 $(function (){
 
 // VARIABLES & DATA
-	var raceLocations = {
-		cities: ["MANHATTAN, NY", "BRONX, NY", "NEW BRUNSWICK, NJ", "STATEN ISLAND, NY"],
-		longitude: [-73.972867, -73.922700, -74.454239, -74.081899],
-		latitude: [40.793973, 40.83111, 40.501516, 40.644335],
-		zoom: [13.45, 15.90, 15.52, 14.5],
-		bearing: [65.00, 65, 0, 25.00]
-	};
+	var locations = [
+		{
+			"city" 		: "MANHATTAN, NY",
+			"longitude" : -73.972867,
+			"latitude"  : 40.793973,
+			"zoom"		: 13.45,
+			"bearing"	: 65.00
+
+		},
+		{
+			"city" 		: "BRONX, NY",
+			"longitude" : -73.922700,
+			"latitude"  : 40.83111,
+			"zoom"		: 15.90,
+			"bearing"	: 65.00
+		},
+		{
+			"city" 		: "NEW BRUNSWICK, NJ",
+			"longitude" : -74.454239,
+			"latitude"  : 40.501516,
+			"zoom"		: 15.52,
+			"bearing"	: 0
+		},
+		{
+			"city" 		: "STATEN ISLAND, NY",
+			"longitude" : -74.081899,
+			"latitude"  : 40.644335,
+			"zoom"		: 14.50,
+			"bearing"	: 25.00
+		}
+	]
+		// cities: ["MANHATTAN, NY", "BRONX, NY", "NEW BRUNSWICK, NJ", "STATEN ISLAND, NY"],
+		// longitude: [, -73.922700, -74.454239, -74.081899],
+		// latitude: [40.793973, 40.83111, 40.501516, 40.644335],
+		// zoom: [13.45, 15.90, 15.52, 14.5],
+		// bearing: [65.00, 65, 0, 25.00]
 	
 	var data = [
 		// MANHATTAN
@@ -126,7 +155,7 @@ $(function (){
 	];	
 	
 // INITIAL PRINT
-	$("#city").html(raceLocations.cities[0]);
+	$("#city").html(locations[0]["city"]);
 
 // INITIAL LOAD DATA
 	function loadData(array, item1, item2, item3) {	
@@ -137,34 +166,19 @@ $(function (){
 	loadData(data[0], "id", "race", "time");	
 
 // FUNCTIONS
-	// FLY TO FUNCTION
-	function flyLocation(longitude, latitude, zVal, bVal){
-		 map.flyTo({
-		 	center: [
-		 		longitude,
-		 		latitude
-		 		],
-		 	zoom: zVal,
-		 	bearing: bVal,
-		 	pitch: 24,
-		 	curve: 1
-		 });
-	};
-
-// INTERACTIONS 
 	var myIndex = 0;
 	// RIGHT
 	$("#right-arrow").click(function(){
 		if (myIndex != 3) {
 			myIndex++;
-			$("#city").html(raceLocations.cities[myIndex]);
-			flyLocation(raceLocations.longitude[myIndex], raceLocations.latitude[myIndex], raceLocations.zoom[myIndex], raceLocations.bearing[myIndex]);
+			$("#city").html(locations[myIndex]["city"]);
+			flyLocation(locations[myIndex]["longitude"], locations[myIndex]["latitude"], locations[myIndex]["zoom"], locations[myIndex]["bearing"]);
 			$("tr").remove();
 			loadData(data[myIndex], "id", "race", "time");
 		} else {
 			myIndex = 0;
-			$("#city").html(raceLocations.cities[0]);
-			flyLocation(raceLocations.longitude[0], raceLocations.latitude[0], raceLocations.zoom[0], raceLocations.bearing[0]);
+			$("#city").html(locations[0]["city"]);
+			flyLocation(locations[0]["longitude"], locations[0]["latitude"], locations[0]["zoom"], locations[0]["bearing"]);
 			$("tr").remove();
 			loadData(data[0], "id", "race", "time");
 		};
@@ -174,15 +188,15 @@ $(function (){
 	$("#left-arrow").click(function(){
 		if (myIndex != 0) {
 			myIndex--;
-			$("#city").html(raceLocations.cities[myIndex]);
-			flyLocation(raceLocations.longitude[myIndex], raceLocations.latitude[myIndex], raceLocations.zoom[myIndex], raceLocations.bearing[myIndex]);
+			$("#city").html(locations[myIndex]["city"]);
+			flyLocation(locations[myIndex]["longitude"], locations[myIndex]["latitude"], locations[myIndex]["zoom"], locations[myIndex]["bearing"]);
 			$("tr").remove();
 			loadData(data[myIndex], "id", "race", "time");
 
 		} else {
 			myIndex = 3;
-			$("#city").html(raceLocations.cities[3]);
-			flyLocation(raceLocations.longitude[3], raceLocations.latitude[3], raceLocations.zoom[3], raceLocations.bearing[3]);
+			$("#city").html(locations[3]["city"]);
+			flyLocation(locations[3]["longitude"], locations[3]["latitude"], locations[3]["zoom"], locations[3]["bearing"]);
 			$("tr").remove();
 			loadData(data[3], "id", "race", "time");
 		};
@@ -195,7 +209,21 @@ $(function (){
         } else if (e.which === 39) {
         	$('#right-arrow').trigger('click');
         };
-    });   	
+    });
+
+    // FLY TO FUNCTION
+	function flyLocation(longitude, latitude, zVal, bVal){
+		 map.flyTo({
+		 	center: [
+		 		longitude,
+		 		latitude
+		 		],
+		 	zoom: zVal,
+		 	bearing: bVal,
+		 	pitch: 24,
+		 	curve: 1
+		 });
+	};	
 
 // MAPBOX 
 	$('.map').fadeIn(1000);
