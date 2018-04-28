@@ -4,8 +4,35 @@
 	font-family: 'Quantico', sans-serif;
 }
 
-/*-----header-----*/
+/*INTRO BANNER*/
+.intro {
+	background-color: rgba(0, 0, 0, .95);
+	position: fixed;
+	top:0%;
+	left: 0%;
+}
 
+#intro {
+	opacity: 100%;
+}
+
+.logo {
+	font-size: 6.5rem;
+}
+
+.supportLogo {
+	font-size: 4.5rem;
+}
+
+.zeroOpac {
+	opacity: 0;
+}
+
+.semi-Opac {
+	opacity: .5;
+}
+
+/*-----header-----*/
 header {
 	height: 70px;
 	background-color: #1E1E24;
@@ -18,8 +45,8 @@ header {
 	left: 0px;
 }
 
-.bungee {
-	font-family: 'Bungee Shade', cursive;
+.faster-one {
+	font-family: 'Faster One', cursive;
 }
 
 ul {
@@ -48,7 +75,7 @@ li a {
 
  /* Icons */
  .themeColor {
- 	color: #4B44CF;
+ 	color: rgba(5, 74, 145);
  	font-size: 1.5rem;
  }
 
@@ -64,33 +91,46 @@ li a {
 }
 
  .main-overlay {
+ 	z-index: 2;
  	position: fixed;
  	top: 0;
  	left: 0;
- 	z-index: 2;
  	height: 100%;
  	width: 100%;
  }
 
  .main-section {
+ 	z-index: 20;
  	position: fixed;
- 	margin-top: 70px;
  	left: 0%;
- 	border-left: 2px solid rgba(5, 74, 145, .5);
- 	box-shadow: 0px 10px 15px rgba(5, 74, 145, .9);
+ 	top: 0%;
+ 	margin-top: 70px;
+ 	border-right: 1px solid rgba(5, 74, 145, .25);
+ 	box-shadow: 3px 0px 5px rgba(5, 74, 145, .25);
+ }
+
+ .sub-section {
+ 	position: fixed;
+ 	left: 30%;
+ 	top: 0%;
+ 	margin-top: 70px;
+ 	box-shadow: 3px 0px 5px rgba(5, 74, 145, .25);
+ 	z-index: 30;
+ }
+
+ .raceLabel {
+ 	color: rgba(5, 74, 145);
  }
 
  /*----Footer-----*/
  .footer {
  	background-color: #1E1E24;
- 	box-shadow: 0px -2px 8px 0px rgba(0,0,0,0.35);
  	height: 40px;
  	position: fixed;
- 	bottom: 0px;
- 	z-index: 3;
+ 	bottom: 0%;
+ 	left: 0%;
+ 	z-index: 50;
  }
-
-
  /*----- Scrollbar------*/
 /*width*/
 ::-webkit-scrollbar {
@@ -110,7 +150,20 @@ li a {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(75, 68, 207); 
+    background: rgba(5, 74, 145); 
 }
 
+tr:hover { 
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-color: rgba(5, 74, 145, .55);
+}
 
+#letsGo {
+	border: 2px white solid;
+}
+
+#letsGo:hover {
+	background-color: white;
+	color: black;
+}

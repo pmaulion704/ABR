@@ -1,12 +1,13 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Landas - Running Ledger</title>
+	<title>Patrick Maulion &mdash; ABR</title>
 	<meta charset="UTF-8">
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/magic.css">
 	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
-	<link href="https://fonts.googleapis.com/css?family=Bungee+Shade" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Quantico" rel="stylesheet">
 	<link href="https://afeld.github.io/emoji-css/emoji.css" rel="stylesheet">
 	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
@@ -15,11 +16,38 @@
 </head>
 	<body>
 		<div id="root">
+			<!-- INTRO  -->
+			<div id="intro" class="intro w-100 h-100 z-999 flex justify-center items-center">
+				<div class="white supportLogo tracked ml5 w-40 mw-100 ">
+					<div class="truncate zeroOpac">
+						<div><span class="faster-one logo">A</span>LWAYS.</div> 
+						<div><span class="faster-one logo">B</span>E.</div>
+						<div><span class="faster-one logo">R</span>UNNING.</div>
+					</div>
+				</div>
+				<div class="white w-50 ph4 zeroOpac">
+					<a href="https://www.youtube.com/watch?v=DRe9DBosLD4" target="_blank"><img src="intro.png"></a>
+					<p class="f4 fw1 mv4 lh-copy pr3">
+						Hi there! <i class="ml2 mb2 f6 em em-wave"></i> <br>
+						"Intensity" by Casey Neistat motivated me to get into running and inspired me to create this personal ledger of all my races in NY / NJ. <br>
+						See my journey from 5Ks to the NYC Marathon! 
+						<i class="em em-sports_medal"></i>
+					</p>
+					<div id="letsGo" class="f4 pa3 w-third tc pointer">LET'S GO!</div>	
+				</div>
+			</div>
+
+
+
 			<header class='mw-100 flex justify-between items-center ph4'>
-				<div class="bungee f2 fw1 tracked">Landas</div>
+				<div class="f6 tracked flex flex-column">
+					<div><span class="faster-one f5">A</span>LWAYS.</div> 
+					<div><span class="faster-one f5">B</span>E.</div>
+					<div><span class="faster-one f5">R</span>UNNING.</div>
+				</div>
 				<nav>
 					<ul class="flex justify-between tracked">
-						<li><a href="#">ABOUT</a></li>
+						<li id="about" class="pointer">ABOUT</a></li>
 					</ul>
 				</nav>
 			</header>
@@ -29,7 +57,8 @@
 				<div id= "map" class= "map"></div>
 
 				<!-- Race Finisher Box -->
-				<div class="main-overlay">
+				<div class="main-overlay"></div>
+					<!-- Main Section -->
 					<div class="main-section w-30 h-100 bg-white ph2">
 							<!-- Race Title -->
 							<div class="w-90 f2 center flex justify-start items-center">
@@ -45,9 +74,9 @@
 								<i id="right-arrow" class="fas fa-chevron-right pointer themeColor"></i>
 							</div>
 							
-							<!-- Table of Races -->
+							<!-- TABLE -->
 							<!-- Fixed Header -->
-							<div class="w-90 f6 bb b--black-80 center flex justify-between pb3 mt3">
+							<div class="w-90 f6 bb b--black-80 center flex justify-between pb3">
 								<div class="fw6 tracked">NAME</div>
 								<i class="em em-stopwatch"></i>
 							</div>
@@ -56,20 +85,43 @@
 							<div>
 								<div class="h-30rem overflow-y-auto">
 									<table class="f6 w-90 center" cellspacing="0">
-									 <tbody id="data">
-									 		<!-- Example per row-->
-											<!-- <tr>
-												<td class="w-70 bb b(double-dash)black-20 tl pv4">2017 NYRR Midnight Run</td>
-												<td class="w-30 bb b(double-dash)black-20 tr pv4">0:31:45</td>
-											</tr> -->											
-										</tbody>
+									 <tbody id="data" class="pointer">											
+									 	<!--  DATA PULL  -->
+									 </tbody>
 									</table>
 								</div>
 							</div>						
-						<!-- Section -->
+						<!-- END main-section -->
 					</div>
-					<!-- Main overlay -->
-				</div>
+					<!-- Slideout Section -->
+					<section class="sub-section w-25 h-100 bg-white-90 ph2 dn">
+						<span id="close" class="f2 fr mr2 fw1 pointer">&times; </span>
+						<div class="w-90 f3 center mt4">
+							<h3 id="raceVal" class="fw4"></h3>
+							<div>
+								<div class="mb4">
+									<h5 class="ma0 fw1 f5">FINISH:</h5>
+									<p id="finishVal" class="mt2 raceLabel"></p>
+								</div>
+								<div class="mv4">
+									<h5 class="ma0 fw1 f5">PACE:</h5>
+									<p id="paceVal" class="mt2 raceLabel"></p>
+								</div>
+								<div class="mv4">
+									<h5 class="ma0 fw1 f5">OVERALL PLACE:</h5>
+									<p id="overallVal" class="mt2 raceLabel"></p>
+								</div>
+								<div class="mv4">
+									<h5 class="ma0 fw1 f5">AGE-GRADE PLACE:</h5>
+									<p id="gplaceVal" class="mt2 raceLabel"></p>
+								</div>
+								<div class="mv4">
+									<h5 class="ma0 fw1 f5">AGE-GRADE PERCENTILE:</h5>
+									<p id="gpercentVal" class="mt2 raceLabel"></p>
+								</div>
+							</div>
+						</div>		
+					</section>
 			</main>
 			<footer class="footer w-100 f6 tl white-80 pl4 "><p>Created by Patrick Maulion 2018</p></footer>
 			
@@ -86,5 +138,6 @@
 		<script src='https://api.tiles.mapbox.com/mapbox-gl-js/v0.44.1/mapbox-gl.js'></script>
 		<script type="text/javascript" src="js/jquery-3.3.1.min.js"></script>
 		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/test.js"></script>
 	</body>
 </html>
