@@ -5,6 +5,7 @@
 	<meta charset="UTF-8">
 	<meta name='viewport' content='initial-scale=1,maximum-scale=1,user-scalable=no' />
 	<link rel="stylesheet" type="text/css" href="css/styles.css">
+	<link rel="stylesheet" type="text/css" href="css/magic.css">
 	<link rel="stylesheet" href="https://unpkg.com/tachyons@4.9.1/css/tachyons.min.css"/>
 	<link href="https://fonts.googleapis.com/css?family=Faster+One" rel="stylesheet">
 	<link href="https://fonts.googleapis.com/css?family=Quantico" rel="stylesheet">
@@ -15,6 +16,29 @@
 </head>
 	<body>
 		<div id="root">
+			<!-- INTRO  -->
+			<div id="intro" class="intro w-100 h-100 z-999 flex justify-center items-center">
+				<div class="white supportLogo tracked ml5 w-40 mw-100 ">
+					<div class="truncate zeroOpac">
+						<div><span class="faster-one logo">A</span>LWAYS.</div> 
+						<div><span class="faster-one logo">B</span>E.</div>
+						<div><span class="faster-one logo">R</span>UNNING.</div>
+					</div>
+				</div>
+				<div class="white w-50 ph4 zeroOpac">
+					<a href="https://www.youtube.com/watch?v=DRe9DBosLD4" target="_blank"><img src="intro.png"></a>
+					<p class="f4 fw1 mv4 lh-copy pr3">
+						Hi there! <i class="ml2 mb2 f6 em em-wave"></i> <br>
+						"Intensity" by Casey Neistat motivated me to get into running and inspired me to create this personal ledger of all my races in NY / NJ. <br>
+						See my journey from 5Ks to the NYC Marathon! 
+						<i class="em em-sports_medal"></i>
+					</p>
+					<div id="letsGo" class="f4 pa3 w-third tc pointer">LET'S GO!</div>	
+				</div>
+			</div>
+
+
+
 			<header class='mw-100 flex justify-between items-center ph4'>
 				<div class="f6 tracked flex flex-column">
 					<div><span class="faster-one f5">A</span>LWAYS.</div> 
@@ -23,7 +47,7 @@
 				</div>
 				<nav>
 					<ul class="flex justify-between tracked">
-						<li><a href="#">ABOUT</a></li>
+						<li id="about" class="pointer">ABOUT</a></li>
 					</ul>
 				</nav>
 			</header>

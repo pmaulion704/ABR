@@ -1,4 +1,4 @@
-$(function (){
+$(function(){
 
 // VARIABLES & DATA
 	var locations = [
@@ -235,6 +235,18 @@ $(function (){
 //==============================================================
 
 
+// INTRO
+	//Onload  
+	$(".zeroOpac").addClass("magictime vanishIn");	
+	// exit
+	$("#letsGo").click(function(){
+		$("#intro").fadeOut(500);
+	});
+	// return
+	$("#about").click(function(){
+		$("#intro").fadeIn(500);
+	});
+
 // INITIAL PRINT
 	$("#city").html(locations[0]["city"]);
 
@@ -242,8 +254,8 @@ $(function (){
 	function loadData(array, item1, item2, item3) {	
 		for (var i = 0; i < array.length; i++) {
 			$("#data").append(
-				'<tr id="' + array[i][item1] + '" class="pointer"><td class="w-70 bb b--black-20 tl supa-lineheight pv4">' + array[i][item2] + 
-				'</td><td class="w-30 bb b--black-20 tr pv4">' + array[i][item3] + '</td></tr>');
+				'<tr id="' + array[i][item1] + '" class="pointer"><td class="w-70 bb b--black-10 tl supa-lineheight pv4">' + array[i][item2] + 
+				'</td><td class="w-30 bb b--black-10 tr pv4">' + array[i][item3] + '</td></tr>');
 		};
 	};
 	loadData(data[0], "id", "race", "time");	
@@ -295,7 +307,7 @@ $(function (){
 	$("tbody").on("click", "tr", function(){
 		for (var i = 0; i < data[myIndex].length; i++) {
 			if (this.id === data[myIndex][i]["id"]) {
-				$(".sub-section").show();
+				$(".sub-section").fadeIn(250);
 				$("#raceVal").html(data[myIndex][i]["race"]);	
 				$("#finishVal").html(data[myIndex][i]["time"]);	
 				$("#paceVal").html(data[myIndex][i]["pace"]);	
@@ -306,15 +318,6 @@ $(function (){
 		};
 	});
 
-	// CLOSE
-	$("#close").click(function(){
-		$(".sub-section").hide();
-	});
-	$(".main-overlay").click(function(){
-		$(".sub-section").hide();
-	});
-
-
 	// KEYBOARD SHORTCUTS
 	$(document).keydown(function(e) {
         if (e.which === 37) {
@@ -323,6 +326,14 @@ $(function (){
         	$('#right-arrow').trigger('click');
         };
     });
+
+    // CLOSE
+	$("#close").click(function(){
+		$(".sub-section").hide();
+	});
+	$(".main-overlay").click(function(){
+		$(".sub-section").hide();
+	});
 
     // FLY TO FUNCTION
 	function flyLocation(longitude, latitude, zVal, bVal){

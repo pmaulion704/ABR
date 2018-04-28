@@ -4,8 +4,35 @@
 	font-family: 'Quantico', sans-serif;
 }
 
-/*-----header-----*/
+/*INTRO BANNER*/
+.intro {
+	background-color: rgba(0, 0, 0, .95);
+	position: fixed;
+	top:0%;
+	left: 0%;
+}
 
+#intro {
+	opacity: 100%;
+}
+
+.logo {
+	font-size: 6.5rem;
+}
+
+.supportLogo {
+	font-size: 4.5rem;
+}
+
+.zeroOpac {
+	opacity: 0;
+}
+
+.semi-Opac {
+	opacity: .5;
+}
+
+/*-----header-----*/
 header {
 	height: 70px;
 	background-color: #1E1E24;
@@ -48,7 +75,7 @@ li a {
 
  /* Icons */
  .themeColor {
- 	color: #4B44CF;
+ 	color: rgba(5, 74, 145);
  	font-size: 1.5rem;
  }
 
@@ -83,17 +110,12 @@ li a {
  }
 
  .sub-section {
- 	visibility: visible;
  	position: fixed;
  	left: 30%;
  	top: 0%;
  	margin-top: 70px;
  	box-shadow: 3px 0px 5px rgba(5, 74, 145, .25);
  	z-index: 30;
- }
-
- tr:hover {
- 	
  }
 
  .raceLabel {
@@ -128,7 +150,20 @@ li a {
 
 /* Handle on hover */
 ::-webkit-scrollbar-thumb:hover {
-    background: rgba(75, 68, 207); 
+    background: rgba(5, 74, 145); 
 }
 
+tr:hover { 
+	text-decoration: underline;
+	text-decoration-style: solid;
+	text-decoration-color: rgba(5, 74, 145, .55);
+}
 
+#letsGo {
+	border: 2px white solid;
+}
+
+#letsGo:hover {
+	background-color: white;
+	color: black;
+}
