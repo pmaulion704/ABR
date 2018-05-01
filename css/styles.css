@@ -16,21 +16,14 @@
 	opacity: 100%;
 }
 
-.logo {
-	font-size: 6.5rem;
-}
-
-.supportLogo {
-	font-size: 4.5rem;
-}
-
 .zeroOpac {
 	opacity: 0;
 }
 
-.semi-Opac {
-	opacity: .5;
+.centerist {
+	margin: 0 auto;
 }
+
 
 /*-----header-----*/
 header {
@@ -131,6 +124,11 @@ li a {
  	left: 0%;
  	z-index: 50;
  }
+
+ .navlink {
+ 	width: 25px;
+ 	height: 25px;
+ }
  /*----- Scrollbar------*/
 /*width*/
 ::-webkit-scrollbar {
@@ -153,6 +151,8 @@ li a {
     background: rgba(5, 74, 145); 
 }
 
+
+/* HOVER INTERACTIONS*/
 tr:hover { 
 	text-decoration: underline;
 	text-decoration-style: solid;
@@ -167,3 +167,19 @@ tr:hover {
 	background-color: white;
 	color: black;
 }
+
+
+/*MEDIUM BREAKPOINT*/
+@media screen and (max-width: 30em) {
+.sub-section {left: 50%;}	
+}
+
+@media screen and (min-width: 30em) and (max-width: 60em) {
+.sub-section {left: 40%;}
+
+
+
+/*END OF MEDIUM MEDIA QUERY*/
+}
+
+

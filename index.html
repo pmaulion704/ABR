@@ -17,23 +17,21 @@
 	<body>
 		<div id="root">
 			<!-- INTRO  -->
-			<div id="intro" class="intro w-100 h-100 z-999 flex justify-center items-center">
-				<div class="white supportLogo tracked ml5 w-40 mw-100 ">
-					<div class="truncate zeroOpac">
-						<div><span class="faster-one logo">A</span>LWAYS.</div> 
-						<div><span class="faster-one logo">B</span>E.</div>
-						<div><span class="faster-one logo">R</span>UNNING.</div>
-					</div>
+			<div id="intro" class="intro w-100 h-100 z-999 flex flex-column flex-row-l justify-center-l items-center-l">
+				<div class="white tracked w-third w-25-m w-40-l center mv3 mv0-l zeroOpac">	
+					<img src="running_logo.png" alt="running logo">	
 				</div>
-				<div class="white w-50 ph4 zeroOpac">
-					<a href="https://www.youtube.com/watch?v=DRe9DBosLD4" target="_blank"><img src="intro.png"></a>
-					<p class="f4 fw1 mv4 lh-copy pr3">
-						Hi there! <i class="ml2 mb2 f6 em em-wave"></i> <br>
-						"Intensity" by Casey Neistat motivated me to get into running and inspired me to create this personal ledger of all my races in NY / NJ. <br>
+				<div class="white w-100 w-80-m w-60-l ph5 ph4-l zeroOpac center">
+					<a href="https://www.youtube.com/watch?v=DRe9DBosLD4&t=1m58s" target="_blank">
+						<img class="center"" src="intro.png">
+					</a>
+					<p class="f5 f4-l fw1 mv4 mv3-ns mv4-l lh-copy pr3">
+						Hi there! <i class="ml1 ml2-l mb2 f7 f6-l em em-wave"></i> <br>
+						"Intensity" by Casey Neistat motivated me to get into running and inspired me to create this personal ledger of all my races in NY / NJ.
 						See my journey from 5Ks to the NYC Marathon! 
-						<i class="em em-sports_medal"></i>
+						<i class="f7 f5-l em em-sports_medal"></i>
 					</p>
-					<div id="letsGo" class="f4 pa3 w-third tc pointer">LET'S GO!</div>	
+					<div id="letsGo" class="f5 f4-l pa1 pv2 pa3-l w-40 w-third-l tc pointer truncate">LET'S GO!</div>	
 				</div>
 			</div>
 
@@ -59,32 +57,32 @@
 				<!-- Race Finisher Box -->
 				<div class="main-overlay"></div>
 					<!-- Main Section -->
-					<div class="main-section w-30 h-100 bg-white ph2">
+					<div class="main-section w-50 w-40-m w-30-l h-100 bg-white ph2">
 							<!-- Race Title -->
 							<div class="w-90 f2 center flex justify-start items-center">
-								<h3 class="dib b mv3">FINISHES </h3>
-								<i class=" f3 ml3 em em-sports_medal"></i>
+								<h3 class="dib b mv2 mv3-ns f4 f3-m f1-l">FINISHES </h3>
+								<i class="f5 f4-m f2-l ml1 ml2-m ml3-l em em-sports_medal"></i>
 								
 							</div>	
 
 							<!-- Transitioning Cities -->
 							<div class="w-90 center flex justify-between items-center">
-								<i id="left-arrow" class="fas fa-chevron-left pointer themeColor"></i>
-								<h3 id="city" class="fw2 tracked tc"></h3>
-								<i id="right-arrow" class="fas fa-chevron-right pointer themeColor"></i>
+								<i id="left-arrow" class="f5 f5-m f3-l fas fa-chevron-left pointer themeColor"></i>
+								<h3 id="city" class="fw2 tracked tc f7 f6-m f5-l"></h3>
+								<i id="right-arrow" class="f5 f5-m f3-l fas fa-chevron-right pointer themeColor"></i>
 							</div>
 							
 							<!-- TABLE -->
 							<!-- Fixed Header -->
-							<div class="w-90 f6 bb b--black-80 center flex justify-between pb3">
-								<div class="fw6 tracked">NAME</div>
-								<i class="em em-stopwatch"></i>
+							<div class="w-90 f6 bb b--black-80 center flex justify-between pb1 pb2-m pb3-l">
+								<div class="f7 f6-m f5-l fw6 tracked">NAME</div>
+								<i class="f7 f6-m f5-l em em-stopwatch"></i>
 							</div>
 
 							<!-- Table Body -->
 							<div>
 								<div class="h-30rem overflow-y-auto">
-									<table class="f6 w-90 center" cellspacing="0">
+									<table class="f7 f6-ns w-90 center" cellspacing="0">
 									 <tbody id="data" class="pointer">											
 									 	<!--  DATA PULL  -->
 									 </tbody>
@@ -94,13 +92,13 @@
 						<!-- END main-section -->
 					</div>
 					<!-- Slideout Section -->
-					<section class="sub-section w-25 h-100 bg-white-90 ph2 dn">
+					<section class="sub-section w-50 w-third-m w-25-l h-100 bg-white-90 ph2 dn">
 						<span id="close" class="f2 fr mr2 fw1 pointer">&times; </span>
 						<div class="w-90 f3 center mt4">
-							<h3 id="raceVal" class="fw4"></h3>
+							<h3 id="raceVal" class="fw4 f4 f4-m f3-l"></h3>
 							<div>
 								<div class="mb4">
-									<h5 class="ma0 fw1 f5">FINISH:</h5>
+									<h5 class="ma0 fw1 f5-ns">FINISH:</h5>
 									<p id="finishVal" class="mt2 raceLabel"></p>
 								</div>
 								<div class="mv4">
@@ -123,7 +121,13 @@
 						</div>		
 					</section>
 			</main>
-			<footer class="footer w-100 f6 tl white-80 pl4 "><p>Created by Patrick Maulion 2018</p></footer>
+			<footer class="footer w-100 f6 tl white-80 pl4 ">
+				<p class="dib">Created by Patrick Maulion 2018</p>
+				<nav class="fr flex items-center mr3 mt2">
+					<a href="https://github.com/pmaulion704"><img class="mr2" src="github.png"></a>
+					<a href="https://www.linkedin.com/in/patrickmaulion/"><img class="navlink" src="linkedin.png"></a>
+				</nav>
+			</footer>
 			
 
 

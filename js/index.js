@@ -1,6 +1,7 @@
 $(function(){
 
 // VARIABLES & DATA
+	// 
 	var locations = [
 		{
 			"city" 		: "MANHATTAN, NY",
@@ -66,7 +67,7 @@ $(function(){
 					"id"    : "012",
 					"race" : "2017 Run as One by JP Morgan Chase",
 					"time" : "0:49:31",
-					"pace" : "12.23",
+					"pace" : "12:23",
 					"overall" : 7576,
 					"age-place" : 4211,
 					"age-percentile": "34.13%"	
@@ -241,6 +242,7 @@ $(function(){
 	// exit
 	$("#letsGo").click(function(){
 		$("#intro").fadeOut(500);
+		flyLocation(locations[0]["longitude"], locations[0]["latitude"], locations[0]["zoom"], locations[0]["bearing"]);
 	});
 	// return
 	$("#about").click(function(){
@@ -359,7 +361,7 @@ $(function(){
 	    container: 'map', // container id
 	    style: 'mapbox://styles/pmaulion/cjg89piec0er12snkswpvaw49', // stylesheet location
 	    center: [-73.972867, 40.793973], // starting position [lng, lat]
-	    zoom: 13.45, // starting zoom
+	    zoom: 11.45, // starting zoom
 	    bearing: 65.00,
 	    pitch: 24.00,
 	    
